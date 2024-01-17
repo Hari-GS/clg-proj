@@ -1,0 +1,116 @@
+body{
+
+    padding: 0 10px;
+
+}
+.top {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+}
+
+@media (min-width: 768px) {
+    .top {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
+}
+
+.top img {
+    width: 100%;
+    max-height: 300px;
+    border-radius: 10px;
+    object-fit: cover; /* Added to make the image cover the container */
+}
+
+.head-content {
+    color: #333;
+    text-align: justify;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    line-height: 1.6;
+}
+
+@media (min-width: 768px) {
+    .top {
+        grid-template-columns: 1fr 1fr; /* Adjusted for larger screens to have two columns */
+    }
+
+    .top img {
+        order: 2; /* Set image order to 2 for larger screens */
+    }
+
+    .head-content {
+        order: 1; /* Set text order to 1 for larger screens */
+    }
+}
+
+.head-content h3{
+    font-weight: normal;
+}
+
+/*Bottom Content */
+
+.content{
+
+    padding: 0 10px;
+
+}
+
+nav {
+    background-color: #f1f1f1;
+    padding: 16px;
+    text-align: start;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 10px;
+
+}
+
+nav a {
+    text-decoration: none;
+    color: #333;
+    padding: 10px 20px;
+    margin: 0 10px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: color 0.3s ease, background-color 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+}
+
+.sub-content{
+    color: #333;
+    text-align: justify;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    line-height: 1.7;
+
+}
+
+nav a:hover {
+    color: #fff; /* Change text color on hover */
+    background-color: #5b4280; /* Change background color on hover */
+}
+.active {
+    background-color: #4D238A; /* Green color, you can change this to your preferred color */
+    color: white;
+}
+
+#introduction-content,
+#program-details-content,
+#content-details-content {
+    display: none;
+    padding: 20px;
+}
+
+/* Responsive Design */
+
+@media only screen and (max-width: 600px) {
+    nav a {
+        display: block;
+        margin-bottom: 10px;
+    }
+}
